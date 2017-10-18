@@ -2,7 +2,6 @@
     "production": {
         "app_function": "twenty_four.app.app",
         "aws_region": "us-west-2",
-        "profile_name": "default",
         "project_name": "twenty-four",
         "runtime": "python3.6",
         "s3_bucket": "zappa-w8a1r46rr",
