@@ -32,7 +32,7 @@ def get_solutions(numbers):
         for f1, f2, f3 in function_combinations:
             res1 = round(f3(f2(f1(a, b), c), d), 7)
             if res1 == 24.0:
-                answers.append('{a} {f1} {b} {f2} {c} {f3} {d}'.format(
+                answers.append('((({a} {f1} {b}) {f2} {c}) {f3} {d})'.format(
                     a=a, b=b, c=c, d=d, f1=f1.__name__, f2=f2.__name__, f3=f3.__name__
                 ))
 
