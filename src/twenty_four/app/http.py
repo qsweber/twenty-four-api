@@ -26,19 +26,16 @@ def status() -> Response:
     return typing.cast(Response, response)
 
 
-@app.route('/api/v0/solutions', methods=['GET'])
+@app.route("/api/v0/solutions", methods=["GET"])
 def index() -> Response:
-    numbers = [
-        int(i)
-        for i in request.args['values'].split(',')
-    ]
+    numbers = [int(i) for i in request.args["values"].split(",")]
 
     if len(numbers) != 4:
-        return 'must contain 4 comma-separated values', 500
+        raise Exception("must contain 4 comma-separated values")
 
-    solutions = {'values': get_solutions(numbers)}
+    solutions = {"values": get_solutions(numbers)}
 
     response = jsonify(solutions)
-    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add("Access-Control-Allow-Origin", "*")
 
     return typing.cast(Response, response)

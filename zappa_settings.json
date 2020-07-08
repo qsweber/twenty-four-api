@@ -2,7 +2,7 @@
     "production": {
         "app_function": "src.twenty_four.app.http.app",
         "aws_region": "us-west-2",
-        "project_name": "service-template",
+        "project_name": "twenty-four",
         "runtime": "python3.8",
         "s3_bucket": "zappa-w8a1r46rr",
         "log_level": "INFO",
