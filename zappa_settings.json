@@ -8,6 +8,7 @@
         "log_level": "INFO",
         "timeout_seconds": 55,
         "cors": true,
+        "events": [],
         "aws_environment_variables": {
             "STAGE": "PROD"
         }
